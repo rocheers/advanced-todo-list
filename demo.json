@@ -1,0 +1,1288 @@
+{
+  "resources": [
+    {
+      "id": "DS-6737714639995935388",
+      "code": "TestContextualRulesSegment3256800969556934201",
+      "description": "TestSegment",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-17T18:53:56Z",
+      "updated_time": "2019-09-17T18:53:56Z",
+      "lifecycle_status": "ACTIVE",
+      "created_by": "dev",
+      "co_owners": [],
+      "admin_access_roles": [],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "frs_y_n",
+                "operator": "IN",
+                "value": [
+                  "Y"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "test",
+                "operator": "GREATER_THAN",
+                "value": "${test}"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "test",
+                "operator": "GREATER_THAN",
+                "value": "10",
+                "key": "${container_id}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6735552261579414718",
+      "code": "ALL_20190911_tester-dc-1",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-11T23:02:48Z",
+      "updated_time": "2019-09-11T23:02:48Z",
+      "start_time": 1568185200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "anevaidya",
+      "co_owners": [],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Merchant_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "CUSTOMER_LIST_MEMBERSHIP",
+                "attribute": "ALL_20190911_dc-test-1",
+                "list_code": "CL-6735551749840148419",
+                "operator": "IS_PART_OF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6735471735100766503",
+      "code": "ALL_20190911_QRCODE_YET_TO_SET_UP",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-11T17:50:19Z",
+      "updated_time": "2019-09-13T19:19:46Z",
+      "start_time": 1568185200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "aksbhatia",
+      "co_owners": [],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "inactive_qrcodes_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6735122233880829417",
+      "code": "EU_20190910_GLOBAL_PAY_LATER_INSTALLMENTS",
+      "description": "Practice segment for me before i do live duplicate of @schacha's work",
+      "segment_type": "BATCH",
+      "region": [
+        "EU"
+      ],
+      "country": [
+        "FR"
+      ],
+      "created_time": "2019-09-10T19:14:04Z",
+      "updated_time": "2019-09-10T19:14:04Z",
+      "start_time": 1568098800000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "jevanderson",
+      "co_owners": [
+        "schacha"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "credit_product_identifiers",
+                "operator": "IN",
+                "value": [
+                  "PAY_LATER_FR"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6735117920672438977",
+      "code": "NA_20190910_inviteLinkingWhitelist",
+      "description": "allow the account number in this list to do invite linking",
+      "segment_type": "BATCH",
+      "region": [
+        "NA"
+      ],
+      "country": [
+        "US"
+      ],
+      "created_time": "2019-09-10T18:57:20Z",
+      "updated_time": "2019-09-10T18:57:20Z",
+      "start_time": 1568098800000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "wenjia",
+      "co_owners": [],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "cust_id",
+                "operator": "EQUALS",
+                "value": "STRING"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6733672454683265066",
+      "code": "ALL_20190906_Trustly_eligibility",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-06T21:28:11Z",
+      "updated_time": "2019-09-06T21:28:11Z",
+      "start_time": 1567753200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "stma",
+      "co_owners": [
+        "xiaolshen",
+        "skandekar"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "mcc_code",
+                "operator": "EQUALS",
+                "value": "6051"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6733671878772917955",
+      "code": "ALL_20190906_BLIK_eligibility",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-06T21:25:57Z",
+      "updated_time": "2019-09-09T20:29:01Z",
+      "expiry_time": "2019-12-08T21:28:54Z",
+      "start_time": 1567753200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "stma",
+      "co_owners": [
+        "xiaolshen",
+        "skandekar"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": 1,
+      "audience_count_refresh_time": "2019-09-09T20:29:00Z",
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "true_indy_name",
+                "operator": "EQUALS",
+                "value": "adults"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "true_indy_name",
+                "operator": "EQUALS",
+                "value": "firearms"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6733670272300636928",
+      "code": "ALL_20190906_PayU_eligibility",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-06T21:19:43Z",
+      "updated_time": "2019-09-06T21:24:42Z",
+      "start_time": 1567753200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "stma",
+      "co_owners": [
+        "xiaolshen",
+        "skandekar"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "true_indy_name",
+                "operator": "EQUALS",
+                "value": "adults"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "true_indy_name",
+                "operator": "EQUALS",
+                "value": "firearms"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6732869491318982588",
+      "code": "ALL_20190904_TOP_SELLER",
+      "description": "This is the DS for Top Sellers for stage environment. Used in the ELMO for the PayPal.me portion of the Top Seller experience",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-04T17:32:17Z",
+      "updated_time": "2019-09-04T17:32:17Z",
+      "start_time": 1567580400000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "phenson",
+      "co_owners": [
+        "susomani"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "CUSTOMER_LIST_MEMBERSHIP",
+                "attribute": "ALL_20190826_Top_Seller",
+                "list_code": "CL-6729511505762424582",
+                "operator": "IS_PART_OF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6732534558202256576",
+      "code": "ALL_20190903_MyBank_Eligibility",
+      "description": "Restrict MyBank presentment if merchant belongs to industry that deals with endangerment of minors, pedophilia, pornography, for infringement of works protected by intellectual property rights and means of payment, the non-compliance with the protection of personal data, with systems automated data processing, acts of money laundering, non-compliance relating to gambling and betting, horse racing, lotteries and provisions relating to conditions of exercise of regulated professions.",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-09-03T19:52:34Z",
+      "updated_time": "2019-09-03T19:52:34Z",
+      "start_time": 1567494000000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "skandekar",
+      "co_owners": [
+        "stma",
+        "xiaolshen"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "true_indy_name",
+                "operator": "EQUALS",
+                "value": "adults"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6731075120335457661",
+      "code": "ALL_20190702_NBA_2ndFI_OnlyCardOnFile",
+      "description": "Users eligible to see the 2nd FI action in NBA with only a card on file.",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [
+        "AU"
+      ],
+      "created_time": "2019-08-30T21:29:12Z",
+      "updated_time": "2019-09-03T20:53:11Z",
+      "start_time": 1562050800000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "sriraramakrishna",
+      "co_owners": [
+        "omprakash"
+      ],
+      "admin_access_roles": [],
+      "audience_count": 1001,
+      "audience_count_refresh_time": "2019-07-25T17:24:02Z",
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "COMPOSITE",
+                "operator": "OR",
+                "conditions": [
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "EQUALS",
+                    "value": "0"
+                  },
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "IS_NULL",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "actv_cc_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "COMPOSITE",
+                "operator": "OR",
+                "conditions": [
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_dc_on_file_cnt",
+                    "operator": "EQUALS",
+                    "value": "0"
+                  },
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_dc_on_file_cnt",
+                    "operator": "IS_NULL",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "COMPOSITE",
+                "operator": "OR",
+                "conditions": [
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "EQUALS",
+                    "value": "0"
+                  },
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "IS_NULL",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "actv_cc_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "actv_dc_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "ATTRIBUTE_COMPARISON",
+                "attribute": "actv_dc_on_file_cnt",
+                "operator": "EQUALS",
+                "value": "actv_cc_on_file_cnt"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6731020662959661129",
+      "code": "EM_20190830_MX_NoBank",
+      "description": "Mexican Users with balance and no active bank account.",
+      "segment_type": "BATCH",
+      "region": [
+        "EM"
+      ],
+      "country": [
+        "MX"
+      ],
+      "created_time": "2019-08-30T17:57:53Z",
+      "updated_time": "2019-08-30T17:57:53Z",
+      "start_time": 1567148400000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "sallahverdiyeva",
+      "co_owners": [
+        "akotov"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "last_recv_pmt_txn_dt",
+                "operator": "IN_X_DAYS",
+                "value": "365"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "tot_bal_equiv_usd_amt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "tot_bal_local_currency",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6731018422061832107",
+      "code": "EM_20190830_MX_Bank_Bal",
+      "description": "Mexican Users with balance and linked bank accounts",
+      "segment_type": "BATCH",
+      "region": [
+        "EM"
+      ],
+      "country": [
+        "MX"
+      ],
+      "created_time": "2019-08-30T17:49:11Z",
+      "updated_time": "2019-09-10T06:13:23Z",
+      "start_time": 1567148400000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "sallahverdiyeva",
+      "co_owners": [
+        "akotov"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "last_recv_pmt_txn_dt",
+                "operator": "IN_X_DAYS",
+                "value": "365"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "tot_bal_equiv_usd_amt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "actv_bank_accts_on_file_cnt",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "tot_bal_local_currency",
+                "operator": "GREATER_THAN",
+                "value": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6730973279047015871",
+      "code": "APAC_NA_EM_20190830_merchant_exclude_IN",
+      "description": "APAC, NA and Latam merchants. India is excluded.",
+      "segment_type": "BATCH",
+      "region": [
+        "EM",
+        "APAC",
+        "NA"
+      ],
+      "country": [
+        "PR",
+        "HK",
+        "HN",
+        "PW",
+        "PY",
+        "HT",
+        "ID",
+        "AG",
+        "IO",
+        "AI",
+        "AN",
+        "AR",
+        "AS",
+        "AU",
+        "AW",
+        "BB",
+        "BD",
+        "JM",
+        "JP",
+        "BM",
+        "BN",
+        "BO",
+        "C2",
+        "SB",
+        "BR",
+        "BS",
+        "BT",
+        "SG",
+        "BZ",
+        "KH",
+        "CA",
+        "KI",
+        "SR",
+        "CC",
+        "SV",
+        "KN",
+        "KP",
+        "KR",
+        "CL",
+        "CN",
+        "CO",
+        "KY",
+        "CR",
+        "TC",
+        "CU",
+        "TH",
+        "CX",
+        "LA",
+        "LC",
+        "TK",
+        "TL",
+        "TO",
+        "TP",
+        "LK",
+        "TT",
+        "TW",
+        "DM",
+        "DO",
+        "UM",
+        "MH",
+        "EC",
+        "US",
+        "MM",
+        "MN",
+        "MO",
+        "MP",
+        "MQ",
+        "UY",
+        "MS",
+        "MV",
+        "MX",
+        "MY",
+        "VC",
+        "VE",
+        "VG",
+        "VI",
+        "NF",
+        "VN",
+        "NI",
+        "VU",
+        "NP",
+        "FJ",
+        "NR",
+        "FK",
+        "FM",
+        "NU",
+        "NZ",
+        "WS",
+        "GD",
+        "GP",
+        "GS",
+        "GT",
+        "GU",
+        "PA",
+        "GY",
+        "PE",
+        "PG",
+        "PH",
+        "PK",
+        "PN"
+      ],
+      "created_time": "2019-08-30T14:54:00Z",
+      "updated_time": "2019-08-30T14:54:00Z",
+      "start_time": 1567141200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "vchellasamy",
+      "co_owners": [
+        "msathuvacharipic"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "2"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6730970440623773290",
+      "code": "EU_20190830_merchant",
+      "description": "EU merchant",
+      "segment_type": "BATCH",
+      "region": [
+        "EU"
+      ],
+      "country": [],
+      "created_time": "2019-08-30T14:43:00Z",
+      "updated_time": "2019-08-30T14:43:00Z",
+      "start_time": 1567141200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "vchellasamy",
+      "co_owners": [
+        "msathuvacharipic"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "2"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6729984044858933737",
+      "code": "ALL_20190827_Hood",
+      "description": "Hood Segment",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [
+        "DE"
+      ],
+      "created_time": "2019-08-27T22:55:16Z",
+      "updated_time": "2019-08-27T22:55:16Z",
+      "start_time": 1566889200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "sdshapiro",
+      "co_owners": [
+        "bwijoyo",
+        "dinganji",
+        "pramana"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "CUSTOMER_LIST_MEMBERSHIP",
+                "attribute": "ALL_20190827_Hood_Customerlist",
+                "list_code": "CL-6729983760883015569",
+                "operator": "IS_PART_OF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6729970483661274770",
+      "code": "ALL_20190827_Giropay Eligibility",
+      "description": "Restrict Giropay from being presented when the merchant industry is \nvirtual currencies. MCC=4829.",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-08-27T22:02:39Z",
+      "updated_time": "2019-08-27T22:02:39Z",
+      "start_time": 1566889200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "skandekar",
+      "co_owners": [
+        "xiaolshen"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "PROFILE",
+                "attribute": "cust_acct_type_code",
+                "operator": "IN",
+                "value": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "PROFILE",
+                "attribute": "mcc_code",
+                "operator": "EQUALS",
+                "value": "4829"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6729522042502031237",
+      "code": "ALL_20190826_TOP_SELLER",
+      "description": "",
+      "segment_type": "BATCH",
+      "region": [],
+      "country": [],
+      "created_time": "2019-08-26T17:02:28Z",
+      "updated_time": "2019-08-30T20:41:31Z",
+      "start_time": 1566802800000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "phenson",
+      "co_owners": [
+        "susomani"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "CUSTOMER_LIST_MEMBERSHIP",
+                "attribute": "ALL_20190826_Top_Seller",
+                "list_code": "CL-6729511505762424582",
+                "operator": "IS_PART_OF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6728108001139636732",
+      "code": "EM_20190822_MX_HasBank_PostLaunch",
+      "description": "Mexican Users with balance and linked bank accounts",
+      "segment_type": "BATCH",
+      "region": [
+        "EM"
+      ],
+      "country": [
+        "MX"
+      ],
+      "created_time": "2019-08-22T21:35:16Z",
+      "updated_time": "2019-08-22T21:35:16Z",
+      "start_time": 1565593200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "spolasani",
+      "co_owners": [
+        "slanka",
+        "spolasani",
+        "sujanarthanan"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "COMPOSITE",
+                "operator": "OR",
+                "conditions": [
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "GREATER_THAN",
+                    "value": "0"
+                  },
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "IS_NULL",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "DS-6728107473700300033",
+      "code": "EM_20190822_MX_NoBank_PostLaunch",
+      "description": "Mexican Users with balance and linked bank accounts",
+      "segment_type": "BATCH",
+      "region": [
+        "EM"
+      ],
+      "country": [
+        "MX"
+      ],
+      "created_time": "2019-08-22T21:33:13Z",
+      "updated_time": "2019-08-22T21:33:13Z",
+      "start_time": 1565593200000,
+      "lifecycle_status": "ACTIVE",
+      "created_by": "spolasani",
+      "co_owners": [
+        "slanka",
+        "spolasani",
+        "sujanarthanan"
+      ],
+      "admin_access_roles": [
+        "PP_SSO_CEP_Consumer_Admin"
+      ],
+      "audience_count": -1,
+      "tags": {
+        "sub_id_types": [],
+        "contextual_params": []
+      },
+      "conditions": {
+        "type": "COMPOSITE",
+        "operator": "OR",
+        "conditions": [
+          {
+            "type": "COMPOSITE",
+            "operator": "AND",
+            "conditions": [
+              {
+                "type": "COMPOSITE",
+                "operator": "OR",
+                "conditions": [
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "EQUALS",
+                    "value": "0"
+                  },
+                  {
+                    "type": "PROFILE",
+                    "attribute": "actv_bank_accts_on_file_cnt",
+                    "operator": "IS_NULL",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "total": 1778
+}
