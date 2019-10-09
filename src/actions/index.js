@@ -9,3 +9,10 @@ export const toggleTodo = id => ({
     type: 'TOGGLE_TODO',
     id
 });
+
+export const changeValue = val => {
+    return {
+        type: 'CHANGE_VALUE',
+        val
+    };
+};

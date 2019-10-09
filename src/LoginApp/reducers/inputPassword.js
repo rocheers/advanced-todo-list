@@ -1,12 +1,12 @@
 import initialState from '../reducers/initialState';
 
-const inputText = (state = initialState.inputText, action) => {
+const inputPassword = (state = initialState.inputPassword, action) => {
     switch(action.type) {
-        case 'CHANGE_VALUE':
+        case 'CHANGE_PASSWORD_VALUE':
             return action.val;
         default:
             return state;
     }
 };
 
-export default inputText;
+export default inputPassword;
