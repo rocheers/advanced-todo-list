@@ -1,31 +1,25 @@
 {
-  "name": "yutong",
+  "name": "advanced-todo-list",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "## This app is for practicing of react with redux and thunk",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
+    "client": "cd client && npm start",
+    "server": "nodemon ./server/index.js",
+    "start": "concurrently \"npm run client\" \"npm run server\""
   },
-  "author": "Yuan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocheers/advanced-todo-list.git"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.15",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.1",
-    "react-scripts": "^2.1.8",
-    "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0",
-    "semantic-ui": "^2.4.2"
+  "bugs": {
+    "url": "https://github.com/rocheers/advanced-todo-list/issues"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "homepage": "https://github.com/rocheers/advanced-todo-list#readme",
   "devDependencies": {
-    "axios": "^0.18.1"
+    "concurrently": "^5.0.0",
+    "nodemon": "^1.19.3"
   }
 }

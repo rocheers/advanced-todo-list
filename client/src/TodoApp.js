@@ -9,7 +9,7 @@ import {bindActionCreators} from 'redux';
 class TodoApp extends React.Component {
 
   componentDidMount() {
-    console.log(this.props);
+    fetch('/api/todos').then(res => res.json()).then(data => console.log(data));
   }
 
   render() {
