@@ -9,7 +9,10 @@ import {bindActionCreators} from 'redux';
 class TodoApp extends React.Component {
 
   componentDidMount() {
-    fetch('/api/todos').then(res => res.json()).then(data => console.log(data));
+    //fetch('/api/todos').then(res => res.json()).then(data => console.log(data));
+    this.props.actions.loadTodos().catch(error => {
+      alert('Loading todos failed' + error);
+    });
   }
 
   render() {
