@@ -4,9 +4,10 @@ export default class InputField extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addTodo(this.props.inputText);
+    this.props.createTodo(this.props.inputText);
+    // this.props.addTodo(this.props.inputText);
     this.props.changeValue('');
-    console.log(this.props);
+
   };
 
   render() {

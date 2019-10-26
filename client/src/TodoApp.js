@@ -19,7 +19,12 @@ class TodoApp extends React.Component {
     return (
       <div className="ui raised very padded text container segment">
         <Header title="Advanced Todo List" />
-        <InputField inputText={this.props.inputText} addTodo={this.props.actions.addTodo} changeValue={this.props.actions.changeValue} />
+        <InputField
+          inputText={this.props.inputText}
+          addTodo={this.props.actions.addTodo}
+          changeValue={this.props.actions.changeValue}
+          createTodo={this.props.actions.createTodo}
+        />
         <List todos={this.props.todos} toggleTodo={this.props.actions.toggleTodo} />
       </div>
     )

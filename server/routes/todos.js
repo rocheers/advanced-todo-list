@@ -1,23 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const { createTodo, getTodos, removeTodo } = require('../controllers/todos');
+const { createTodo, getTodos, removeTodo, updateTodo} = require('../controllers/todos');
 
 router.get('/', async (req, res) => {
     let todos = await getTodos();
     res.json(todos);
 });
 
-router.post('/', (req, res) => {
-    if (!req.body.name || req.body.name.length < 3) {
-        res.status(400).send('Name is required and should be minimum 3 characters');
+router.post('/', async (req, res) => {
+    if (!req.body.inputText) {
+        res.status(400).json({message: 'inputText is required'});
         return;
     }
-    const todo = {
-        id: todos.length + 1,
-        name: req.body.name
-    };
-    todos.push(todo);
-    res.send(todo);
+    let todo = await createTodo(req.body.inputText);
+    res.json(todo);
+   
+});
+
+router.put('/:id', async (req, res) => {
+    console.log('test');
+    await updateTodo(req.params.id);
+    let todos = await getTodos();
+    res.json(todos);
 });
 
 router.delete('/:id', (req, res) => {

@@ -14,8 +14,8 @@
 
 import React from 'react';
 
-const ListItem = ({ onClick, completed, text }) => (
-  <li className="item" onClick={onClick} style={{textDecoration: completed ? 'line-through' : 'none'}}>
+const ListItem = ({ onClick, status, text }) => (
+  <li className="item" onClick={onClick} style={{textDecoration: status === 'completed' ? 'line-through' : 'none'}}>
     {text}
   </li>
 )

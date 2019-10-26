@@ -1,8 +1,8 @@
 const Todo = require('../models/Todo');
 
-async function createTodo() {
+async function createTodo(inputText) {
   const todo = new Todo({
-      text: 'first todo item',
+      text: inputText,
       status: 'incompleted'
   });
 
@@ -15,6 +15,14 @@ async function getTodos() {
   return todos;
 }
 
+async function updateTodo(id) {
+  const todo = await Todo.findById(id);
+  if (!todo) return;
+  todo.status = todo.status === 'incompleted' ? 'completed' : 'incompleted';
+  const result = await todo.save();
+  return result;
+}
+
 async function removeTodo(id) {
   const result = await Todo.deleteOne({_id: id});
 }
@@ -22,5 +30,6 @@ async function removeTodo(id) {
 module.exports = {
   createTodo,
   getTodos,
-  removeTodo
+  removeTodo,
+  updateTodo
 }

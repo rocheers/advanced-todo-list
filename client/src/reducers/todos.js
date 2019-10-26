@@ -1,5 +1,5 @@
 import initialState from '../reducers/initialState';
-import { ADD_TODO, TOGGLE_TODO, INPUT_TEXT, LOAD_TODOS_SUCCESS } from '../constants/actionTypes';
+import { ADD_TODO, TOGGLE_TODO, INPUT_TEXT, LOAD_TODOS_SUCCESS, CREATE_TODO_SUCCESS, TOGGLE_TODO_SUCCESS } from '../constants/actionTypes';
 
 const todos = (state = initialState.todos, action) => {
     switch (action.type) {
@@ -20,6 +20,12 @@ const todos = (state = initialState.todos, action) => {
             return;
 
         case LOAD_TODOS_SUCCESS:
+            return action.todos;
+
+        case CREATE_TODO_SUCCESS:
+            return [...state, action.todo];
+
+        case TOGGLE_TODO_SUCCESS:
             return action.todos;
 
         default:
