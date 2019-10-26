@@ -3,7 +3,7 @@ import { COMPLETED, INCOMPLETED } from '../constants/todoConstant';
 import axios from 'axios';
 
 export const addTodo = text => ({
-    type: ADD_TODO, 
+    type: ADD_TODO,
     text,
     status: INCOMPLETED
 });
@@ -14,19 +14,16 @@ export const toggleTodo = (id, status) => ({
     status: status === INCOMPLETED ? COMPLETED : INCOMPLETED
 });
 
-export const changeValue = val => {
-    return {
-        type: CHANGE_VALUE,
-        val
-    };
-};
+export const changeValue = val => ({
+    type: CHANGE_VALUE,
+    val
+});
 
-export function loadTodosSuccess(todos) {
+function loadTodosSuccess(todos) {
     return { type: LOAD_TODOS_SUCCESS, todos };
 }
 
-
-export function loadTodos() {
+export const loadTodos = () => {
     return function (dispatch) {
         return axios.get('/todos').then(todos => {
             dispatch(loadTodosSuccess(todos.data));
@@ -34,6 +31,4 @@ export function loadTodos() {
             throw error;
         });
     };
-}
-
-
+};

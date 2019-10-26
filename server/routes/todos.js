@@ -4,7 +4,6 @@ const { createTodo, getTodos, removeTodo } = require('../controllers/todos');
 
 router.get('/', async (req, res) => {
     let todos = await getTodos();
-    console.log(todos);
     res.json(todos);
 });
 
