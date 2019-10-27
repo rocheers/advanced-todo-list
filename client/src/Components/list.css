@@ -1,0 +1,8 @@
+.pagination .number {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.pagination .ellipsis {
+    margin-right: 10px;
+}
