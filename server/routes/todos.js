@@ -18,7 +18,6 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-    console.log('test');
     await updateTodo(req.params.id);
     let todos = await getTodos();
     res.json(todos);

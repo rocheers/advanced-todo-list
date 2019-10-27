@@ -1,5 +1,12 @@
 import initialState from '../reducers/initialState';
-import { ADD_TODO, TOGGLE_TODO, INPUT_TEXT, LOAD_TODOS_SUCCESS, CREATE_TODO_SUCCESS, TOGGLE_TODO_SUCCESS } from '../constants/actionTypes';
+import {
+    ADD_TODO,
+    TOGGLE_TODO,
+    INPUT_TEXT,
+    LOAD_TODOS_SUCCESS,
+    CREATE_TODO_SUCCESS,
+    TOGGLE_TODO_SUCCESS
+} from '../constants/actionTypes';
 
 const todos = (state = initialState.todos, action) => {
     switch (action.type) {
@@ -10,11 +17,16 @@ const todos = (state = initialState.todos, action) => {
                     text: action.text,
                     status: action.status
                 }
-            ]
+            ];
         case TOGGLE_TODO:
-            return state.map(todo => todo._id === action.id ? {
-                ...todo, status: action.status
-            } : todo);
+            return state.map(todo =>
+                todo._id === action.id
+                    ? {
+                          ...todo,
+                          status: action.status
+                      }
+                    : todo
+            );
 
         case INPUT_TEXT:
             return;
@@ -31,6 +43,6 @@ const todos = (state = initialState.todos, action) => {
         default:
             return state;
     }
-}
+};
 
 export default todos;

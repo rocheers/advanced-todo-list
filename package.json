@@ -4,6 +4,9 @@
   "description": "## This app is for practicing of react with redux and thunk",
   "main": "server/index.js",
   "scripts": {
+    "setup:client": "cd client && npm i",
+    "setup:server": "cd server && npm i",
+    "setup": "npm run setup:client && npm run setup:server",
     "client": "cd client && npm start",
     "server": "nodemon ./server/index.js",
     "start": "concurrently \"npm run client\" \"npm run server\""

@@ -1,18 +1,6 @@
-import { ADD_TODO, TOGGLE_TODO, LOAD_TODOS_SUCCESS, CHANGE_VALUE, CREATE_TODO_SUCCESS, TOGGLE_TODO_SUCCESS } from '../constants/actionTypes';
-import { COMPLETED, INCOMPLETED } from '../constants/todoConstant';
+import { LOAD_TODOS_SUCCESS, CHANGE_VALUE, CREATE_TODO_SUCCESS, TOGGLE_TODO_SUCCESS } from '../constants/actionTypes';
+import { UNCOMPLETED } from '../constants/todoConstant';
 import axios from 'axios';
-
-// export const addTodo = text => ({
-//     type: ADD_TODO,
-//     text,
-//     status: INCOMPLETED
-// });
-
-// export const toggleTodo = (id, status) => ({
-//     type: TOGGLE_TODO,
-//     id,
-//     status: status === INCOMPLETED ? COMPLETED : INCOMPLETED
-// });
 
 export const changeValue = val => ({
     type: CHANGE_VALUE,
@@ -41,7 +29,7 @@ export const createTodo = (inputText) => {
     return function (dispatch) {
         return axios.post('/todos', {
             inputText,
-            status: INCOMPLETED
+            status: UNCOMPLETED
         }).then(todo => {
             dispatch(createTodoSuccess(todo.data));
         }).catch(error => {

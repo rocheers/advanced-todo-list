@@ -1,4 +1,4 @@
 module.exports = {
-    INCOMPLETED: 'INCOMPLETED',
+    UNCOMPLETED: 'UNCOMPLETED',
     COMPLETED: 'COMPLETED'
 }

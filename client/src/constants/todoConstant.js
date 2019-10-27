@@ -1,2 +1,2 @@
-export const COMPLETED = 'completed';
-export const INCOMPLETED = 'incompleted';
+export const COMPLETED = 'COMPLETED';
+export const UNCOMPLETED = 'UNCOMPLETED';
