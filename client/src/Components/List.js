@@ -18,7 +18,7 @@ export default class List extends Component {
   }
 
   handleClick = (page) => {
-    this.setState((prevState) => ({ cur: page, pages: makePage(prevState.total, prevState.cur, 2) }));
+    this.setState((prevState) => ({ cur: page, pages: makePage(prevState.total, prevState.cur, 2)}));
   };
 
   render() {
@@ -30,18 +30,18 @@ export default class List extends Component {
       <>
         <Router>
           <Switch>
-              <Route path={ cur === 1 ? '/' : `/${cur}`}>
-                <ul className="ui middle aligned ordered selection list">
-                  {todos.slice((cur - 1) * NUM_PER_PAGE, cur * NUM_PER_PAGE).map(todo => (
-                    <ListItem
-                      key={todo._id}
-                      {...todo}
-                      onClick={() => toggleTodo(todo._id)}
-                    />
-                  ))}
-                </ul>
-              </Route>
-            </Switch>
+            <Route path={ cur === 1 ? '/' : `/${cur}`}>
+              <ul className="ui middle aligned ordered selection list">
+                {todos.slice((cur - 1) * NUM_PER_PAGE, cur * NUM_PER_PAGE).map(todo => (
+                  <ListItem
+                    key={todo._id}
+                    {...todo}
+                    onClick={() => toggleTodo(todo._id)}
+                  />
+                ))}
+              </ul>
+            </Route>
+          </Switch>
           <div>
             <div className="pagination">
               {pages.map((page, idx) => {
@@ -49,7 +49,7 @@ export default class List extends Component {
                   <span className="ellipsis">{page}</span> :
                   <Link to={{ pathname: page === 1 ? '/' : `/${page}` }}>
                     <span
-                      className="number"
+                      className= {cur === page ? 'number-selected' : 'number'}
                       key={idx}
                       onClick={() => this.handleClick(page)}>
                       {page}
