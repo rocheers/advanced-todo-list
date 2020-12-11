@@ -6,3 +6,15 @@
 .pagination .ellipsis {
     margin-right: 10px;
 }
+
+.number-selected {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.number:hover {
+    font-size: 30px;
+    font-weight: bold;
+}
